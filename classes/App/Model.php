@@ -232,6 +232,21 @@ class Model
 			return $this->$key;
 		}
 	}
+	/** Twig engine template fix
+	 * since Twig check if property exists in class we ned to retur true if model has many or one related model
+	 * */
+	public function __isset($key) : bool {
+		if(isset($this->$key)) {
+			return true;
+		}
+		$thisclass = get_called_class();
+		if(!isset(Model::_getModelsGlobalData()->$thisclass->many[$key]) && !isset(Model::_getModelsGlobalData()->$thisclass->one[$key])) {
+			return false;
+		} else {
+			return true;
+		}
+		return false;
+	}
 	
 	public function __call($func, $args) {
 		$thisclass = get_called_class();
