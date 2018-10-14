@@ -12,16 +12,13 @@
  *
  * * */
 
-require_once 'loader.php';
-
-	$pdo = new PDO('mysql:dbname=dev_bot;host=localhost;charset=utf8', 'master', '12dsfgNJKGH&34');
-
+include 'loader.php';
+$pdo = new PDO('mysql:dbname=dev_bot;host=localhost;charset=utf8', 'master', '12dsfgNJKGH&34');
 App\Model::_setDB($pdo);
 App\Model::setPrefix('app_');
 $user = new Users(27);
 
 echo $user->username;
-
 var_dump($user->getContacts(array('order' => 'contact_id DESC')));
 
 

@@ -14,16 +14,11 @@
 
 
 if(!defined('PATH')) {
-	define('PATH', __DIR__ .'/');
+	define('PATH', __DIR__ .'/../');
 }
 if(!defined('MODEL_PATH')) {
 	define('MODEL_PATH', __DIR__ .'/Models/');
 }
-
-
-
-
-
 
 function auto($class_name) 
 {

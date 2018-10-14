@@ -14,9 +14,8 @@
 
 
 class Contacts extends App\Model {
-	public static function getSource() {
-		return 'app_contacts';
-	}
+
+
 }
 
 
