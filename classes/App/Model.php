@@ -1,11 +1,7 @@
 <?php
-/**
- * @author Łukasz Szpak ( szpaaaaq@gmail.com )
- * @Copyright 2018 SzpaQ
- * @license ALL RIGHTS RESERVED
- * */
 
 namespace App;
+
 class Model
 {
     public static $data = false;
